@@ -5,9 +5,6 @@ them and draft **evidence-backed** outreach. Built as a portfolio project for an
 engineering role, it prioritizes working software, sound architecture, tests, and honest
 documentation over superficial features.
 
-Target context: SMEs operating in **Malawi and across the AfCFTA**. All bundled companies and
-contacts are **clearly fictional demo data**. No real customer relationships are claimed.
-
 ## What it does
 
 1. Manage companies and sales leads (CRUD, search, filter).
