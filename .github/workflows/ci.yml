@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install API deps
+        run: pip install -e ./apps/api[dev]
+      - name: Lint
+        run: |
+          cd apps/api
+          ruff check .
+          ruff format --check .
+      - name: Migrate (sqlite smoke test)
+        run: |
+          cd apps/api
+          alembic upgrade head
+        env:
+          DATABASE_URL: sqlite:///./ci.db
+      - name: Tests (mock AI, no keys required)
+        run: |
+          cd apps/api
+          python -m pytest -q
+        env:
+          DATABASE_URL: sqlite:///./test_ci.db
+          AI_PROVIDER: mock
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - name: Install web deps
+        run: npm ci
+        working-directory: apps/web
+      - name: Typecheck
+        run: npm run typecheck
+        working-directory: apps/web
+      - name: Tests
+        run: npm test
+        working-directory: apps/web
+      - name: Production build
+        run: npm run build
+        working-directory: apps/web

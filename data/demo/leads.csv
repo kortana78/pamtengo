@@ -1,0 +1,9 @@
+company_name,company_country,company_industry,company_size,full_name,job_title,email,source,description
+Lilongwe Fresh Produce Ltd (demo),Malawi,agriculture,51-200,Chikondi Banda,Managing Director,chikondi@lilongwe-fresh.demo,demo_csv,Fictional demo: maize and groundnut aggregation SME
+Blantyre Freight & Logistics (demo),Malawi,logistics,51-200,Mphatso Kaimfa,Head of Operations,mphatso@blantyre-freight.demo,demo_csv,Fictional demo: regional trucking company
+Zomba Textiles Cooperative (demo),Malawi,manufacturing,11-50,Tawonga Phiri,Founder,tawonga@zomba-textiles.demo,demo_csv,Fictional demo: textile cooperative
+Lusaka PayBridge (demo),Zambia,fintech,11-50,Mutinta Hamoonga,CEO,mutinta@paybridge.demo,demo_csv,Fictional demo: mobile-money startup
+Kigali Cold Chain (demo),Rwanda,logistics,201-500,Aline Uwase,Operations Manager,aline@kigali-coldchain.demo,demo_csv,Fictional demo: cold storage operator
+Accra MarketLink (demo),Ghana,retail,51-200,Kwame Mensah,Sales Lead,kwame@marketlink.demo,demo_csv,Fictional demo: market retail chain
+Nairobi AgriSensors (demo),Kenya,agriculture,11-50,Wanjiru Njoroge,CTO,wanjiru@agrisensors.demo,demo_csv,Fictional demo: soil sensor startup
+Cape Town SolarServe (demo),South Africa,manufacturing,201-500,Pieter van Wyk,Procurement Head,pieter@solarserve.demo,demo_csv,Fictional demo: solar installer
